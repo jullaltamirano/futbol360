@@ -1,0 +1,26 @@
+---
+import { FaPhoneAlt } from 'react-icons/fa';
+import { ContactForm } from './ContactComponents/ContactForm';
+---
+
+<section class="md:py-20 py-10 md:px-20 px-5 bg-yellow-50" id="contact">
+   <div class="container mx-auto px-4 md:px-6">
+      <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+         <div class="space-y-4">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contáctanos</h2>
+            <p class="max-w-[600px] text-gray-500 md:text-xl">
+               ¿Tienes alguna pregunta? Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto
+               contigo lo antes posible.
+            </p>
+            <div class="space-y-2">
+               <div class="flex items-center">
+                  <FaPhoneAlt className='text-yellow-400' />&nbsp;<span>+51 960 888 024</span>
+               </div>
+            </div>
+         </div>
+         <div class="space-y-4">
+            <ContactForm client:visible />
+         </div>
+      </div>
+   </div>
+</section>

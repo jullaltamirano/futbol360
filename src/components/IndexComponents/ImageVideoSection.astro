@@ -1,0 +1,56 @@
+---
+import { Video } from "./Video";
+---
+
+<section class="md:py-20 py-10 md:px-20 px-5">
+   <div class="container mx-auto px-4 md:px-6">
+      <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+         <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestra Metodología</h2>
+         <p class="max-w-[700px] text-gray-500 md:text-xl">
+            Conoce cómo trabajamos para mejorar tu condición física y habilidades futbolísticas
+         </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+         {/* 2 images on left - stacked vertically */}
+         <div class="flex flex-col gap-4">
+            <div class="relative aspect-square rounded-lg overflow-hidden">
+               <img
+                  src="/images/image-1.jpg"
+                  alt="Entrenamiento técnico"
+                  class="object-cover"
+               />
+            </div>
+            <div class="relative aspect-square rounded-lg overflow-hidden">
+               <img
+                  src="/images/image-2.jpeg"
+                  alt="Entrenamiento táctico"
+                  class="object-cover"
+               />
+            </div>
+         </div>
+
+         {/* Vertical video in middle */}
+         <div class="relative rounded-lg overflow-hidden bg-gold-800/20">
+            <!-- <Video client:only="react" /> -->
+         </div>
+
+         {/* 2 images on right - stacked vertically */}
+         <div class="flex flex-col gap-4">
+            <div class="relative aspect-square rounded-lg overflow-hidden">
+               <img
+                  src="/images/image-3.jpeg"
+                  alt="Entrenamiento físico"
+                  class="object-cover"
+               />
+            </div>
+            <div class="relative aspect-square rounded-lg overflow-hidden">
+               <img
+                  src="/images/image-4.jpeg"
+                  alt="Entrenamiento mental"
+                  class="object-cover"
+               />
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro"
+import HeroBannerSection from "../components/IndexComponents/HeroBannerSection.astro"
+import ImageVideoSection from "../components/IndexComponents/ImageVideoSection.astro"
+import PlansSection from "../components/IndexComponents/PlansSection.astro"
+import CoachesSection from "../components/IndexComponents/CoachesSection.astro"
+import SponsorsSection from "../components/IndexComponents/SponsorsSection.astro"
+import LocationSection from "../components/IndexComponents/LocationSection.astro"
+import ContactSection from "../components/IndexComponents/ContactSection.astro"
+
+import { Navbar } from "../components/Navbar"
+import { WhatsappButton } from "../components/WhatsappButton"
+
+---
+
+<Layout>
+	<main class="flex min-h-screen flex-col">
+		<Navbar client:visible />
+		<WhatsappButton client:visible />
+
+		{/* Hero Banner with Background Image */}
+		<HeroBannerSection />
+
+		{/* Video and Images Grid - Methodology */}
+		<ImageVideoSection />
+
+		{/* Plans Section - Vanilla HTML version */}
+		<PlansSection />
+
+		{/* Coaches Section */}
+		<CoachesSection />
+
+		{/* Sponsors */}
+		<!-- <SponsorsSection /> -->
+
+		{/* Locations */}
+		<LocationSection />
+
+		{/* Contact Form - Vanilla HTML version */}
+		<ContactSection />

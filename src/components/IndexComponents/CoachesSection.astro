@@ -1,0 +1,65 @@
+---
+
+import type { Coach } from "../../interfaces/coach.interface";
+
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+
+const coaches: Coach[] = [
+   {
+      name: "Gianfranco Labarthe",
+      position: "Entrenador Principal",
+      image: "/images/gianfranco-labarthe.jpg",
+      instagram: "http://www.instagram.com/gianfranco_labarthe",
+   },
+   {
+      name: "Jaime Avellaneda",
+      position: "Entrenador",
+      image: "/images/jaime-avellaneda.jpg",
+      instagram: "http://www.instagram.com/jaimeavellaneda10",
+   },
+   {
+      name: "Alejandro Pareja",
+      position: "Entrenador",
+      image: "/images/alejandro-pareja.jpg",
+      instagram: "http://www.instagram.com/alejopa1995",
+   },
+   {
+      name: "Marlon Zacarias",
+      position: "Entrenador",
+      image: "/images/marlon-zacarias.jpg",
+      instagram: "http://www.instagram.com/jp_zacmar",
+   },
+]
+---
+
+<section class="md:py-20 py-10 md:px-20 px-5" id="nosotros">
+   <div class="container mx-auto px-4 md:px-6">
+      <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+         <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestro Equipo Técnico</h2>
+         <p class="max-w-[700px] text-gray-500 md:text-xl">
+            Profesionales con experiencia que guiarán tu desarrollo deportivo.
+         </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+         {
+            coaches.map(( coach ) => (
+               <div class="bg-white border border-zinc-100 rounded-lg shadow-sm overflow-hidden transition-all hover:shadow-lg">
+                  <div class="relative aspect-square">
+                      <img src={ coach.image } alt={ coach.name } class="object-cover w-full h-[450px] object-top" />
+                  </div>
+                  <div class="p-4">
+                     <h3 class="font-bold text-lg">{ coach.name }</h3>
+                     <p class="text-sm text-gray-500">{ coach.position }</p>
+                  </div>
+                  <div class="p-4 pt-0 flex justify-end items-center">
+                     <div class="flex space-x-2">
+                        <a href={ coach.instagram } target="_blank" ><FaInstagram role="button" className="hover:scale-105 transition-all" style={{ fontSize: '22px' }} /></a>
+                     </div>
+                  </div>
+               </div>
+            ))
+         }
+      </div>
+   </div>
+</section>

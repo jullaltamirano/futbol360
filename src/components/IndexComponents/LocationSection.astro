@@ -1,0 +1,43 @@
+---
+import type { Location } from "../../interfaces/location.interface"
+
+import { LocationModal } from "./LocationComponents/LocationModal.tsx"
+
+const locations: Location[] = [
+   {
+      name: "Estadio Julio Montjoy",
+      address: "Jr. Santo Cristo 584 - Santiago de Surco",
+      image: "/images/julio-montjoy.jpg",
+      latitude: -12.1457316,
+      longitude: -77.000545,
+      googleMaps: "https://maps.app.goo.gl/ym8aPc6ScQDNg2kV9",
+   },
+   {
+      name: "Colegio Alfonso Ugarte",
+      address: "Chacarilla 591 - San Isidro",
+      image: "/images/alfonso-ugarte.jpg",
+      latitude: -12.1006105,
+      longitude: -77.0278991,
+      googleMaps: "https://maps.app.goo.gl/SPUhEBMhePBKdrMZ8",
+   },
+];
+
+---
+
+<section class="md:py-20 py-10 md:px-20 px-5 bg-zinc-50" id="locations">
+   <div class="container mx-auto px-4 md:px-6">
+      <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+         <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestras Sedes</h2>
+         <p class="max-w-[700px] text-gray-500 md:text-xl">
+            Contamos con 2 sedes estratégicamente ubicadas para tu comodidad
+         </p>
+      </div>
+      <div class="grid gap-8 md:grid-cols-2">
+         {
+            locations.map(( location: Location ) => (
+               <LocationModal client:visible location={ location } />
+            ))
+         }
+      </div>
+   </div>
+</section>

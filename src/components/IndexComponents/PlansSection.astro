@@ -1,0 +1,105 @@
+---
+import type { Plan } from "../../interfaces/plan.interface"
+import { RegisterButton } from "./PlansComponents/RegisterButton"
+
+const plans: Plan[] = [
+	{
+		title: "Plan Básico",
+		price: 260,
+		period: "mes",
+		features: [
+			"8 sesiones",
+			"50% de descuento en plan nutricional (S/. 75 mensual - no incluido)",
+			"50% de descuento en fisioterapia (S/. 50 por sesión - no incluido)",
+			"Acceso a eventos y actividades exclusivas: torneos, inmersión en hielo, pichangas",
+			"Webinars sobre rendimiento, nutrición y cambio de hábitos",
+			"Comunidad 360: retos, dinámicas y acompañamiento integral para tu progreso",
+		],
+		outstanding: false
+	},
+	{
+		title: "Plan Premium",
+		price: 300,
+		period: "mes",
+		features: [
+			"12 sesiones",
+			"50% de descuento en plan nutricional (S/. 75 mensual - no incluido)",
+			"50% de descuento en fisioterapia (S/. 50 por sesión - no incluido)",
+			"Acceso a eventos y actividades exclusivas: torneos, inmersión en hielo, pichangas",
+			"Webinars sobre rendimiento, nutrición y cambio de hábitos",
+			"Comunidad 360: retos, dinámicas y acompañamiento integral para tu progreso",
+		],
+		outstanding: true
+	},
+	{
+		title: "Plan Elite",
+		price: 340,
+		period: "mes",
+		features: [
+			"Sesiones ilimitadas",
+			"50% de descuento en plan nutricional (S/. 75 mensual - no incluido)",
+			"50% de descuento en fisioterapia (S/. 50 por sesión - no incluido)",
+			"Acceso a eventos y actividades exclusivas: torneos, inmersión en hielo, pichangas",
+			"Webinars sobre rendimiento, nutrición y cambio de hábitos",
+			"Comunidad 360: retos, dinámicas y acompañamiento integral para tu progreso",
+		],
+		outstanding: false
+	}
+]
+---
+
+<section class="md:py-20 py-10 md:px-20 px-5 bg-zinc-50">
+   <div class="container mx-auto px-4 md:px-6">
+     <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+      <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestros Planes</h2>
+      <p class="max-w-[700px] text-gray-500 md:text-xl">
+        Elige el plan que mejor se adapte a tus objetivos y disponibilidad
+      </p>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+         plans.map( plan => (
+            <div 
+                class:list={[
+                   "bg-yellow-50 border-yellow-200 shadow-lg",
+                   {
+                      "border-2 scale-105 z-10": plan.outstanding, 
+                      "bg-white border-zinc-100": !plan.outstanding
+                   }
+                ]}
+                class="border rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+               <div class="p-6 bg-yellow-50 text-center border-b border-yellow-100">
+                <h3 class="text-2xl font-bold">{plan.title}</h3>
+                <div class="mt-4 flex items-baseline justify-center">
+                  <span class="text-5xl font-extrabold">S/ {plan.price}</span>
+                  <span class="ml-1 text-xl text-gray-500">/{plan.period}</span>
+                </div>
+               </div>
+               <div class="p-6 flex-grow">
+                <ul class="space-y-4">
+                     {
+                        plan.features.map( ( feature, index ) => (
+                         <li class="flex items-start">
+                            <svg class="h-6 w-6 text-yellow-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class:list={[
+                                  {
+                                     "font-bold text-xl": +index === 0, 
+                                     "": +index > 0
+                                  }
+                               ]}>{ feature }</span>
+                         </li>
+                        ))
+                     }
+                </ul>
+               </div>
+               <div class="p-6 bg-gray-50">
+                  <RegisterButton plan={ plan } client:visible />
+               </div>
+            </div>
+         ))
+      }
+     </div>
+   </div>
+</section>

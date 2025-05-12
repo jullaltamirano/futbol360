@@ -1,0 +1,31 @@
+---
+import { CtaButton } from "../CtaButton";
+---
+
+<section class="relative py-24 text-white">
+   {/* Background Image */}
+   <div class="absolute inset-0 z-0">
+      {/* Background Image with Brightness */}
+      <img
+         src="/images/banner-1.jpeg"
+         alt="Fútbol para adultos"
+         class="object-cover brightness-40 w-full h-full"
+      />
+   </div>
+
+   {/* Content */}
+   <div class="container relative z-10 mx-auto px-4 md:px-6">
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+         <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl drop-shadow-md font-exo-bold uppercase">
+            Mejora tu salud y rendimiento con el fútbol
+         </h1>
+         <p class="max-w-[600px] mx-auto text-lg text-yellow-50 md:text-xl drop-shadow-md font-semibold">
+            Nuestra escuela de fútbol para adultos combina entrenamiento deportivo de calidad con un enfoque en la
+            salud, bienestar y acondicionamiento físico. Entrena, compite y mejora tu calidad de vida.
+         </p>
+         <div>
+            <CtaButton client:visible />
+         </div>
+      </div>
+   </div>
+</section>
