@@ -33,6 +33,18 @@ export const LocationModal = ( props: Props ) => {
                   <h3 className="font-bold text-lg">{ location.name }</h3>
                </div>
                <p className="text-sm text-gray-500 mt-1">{ location.address }</p>
+               {
+                  location.schedule.length > 0 && (
+                     <div className="mt-2">
+                        <h4 className="text-sm font-medium text-gray-700">Horario:</h4>
+                        <ul className="list-disc list-inside text-sm text-gray-600">
+                           { location.schedule.map((time, index) => (
+                              <li key={index}>{ time }</li>
+                           )) }
+                        </ul>
+                     </div>
+                  )
+               }
             </div>
             <div className="p-0" >
                <div className="bg-gray-100 h-[350px] flex items-center justify-center overflow-hidden">
