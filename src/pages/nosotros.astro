@@ -1,115 +1,113 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import { Valores } from "../components/NosotrosComponents/Valores";
-import { Navbar } from "../components/Navbar";
-import { WhatsappButton } from "../components/WhatsappButton";
 
 import { FiTarget } from "react-icons/fi";
 import { BsLightbulb } from "react-icons/bs";
 
 ---
 
-<Navbar client:visible />
-<WhatsappButton client:visible />
-
-<main class="flex min-h-screen flex-col">
-   <!-- Hero Banner -->
-   <section class="relative py-24 text-white">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0">
-         <img
-            src="/images/nosotros-banner.jpg"
-            alt="Sobre Nosotros"
-            class="object-cover object-center brightness-40 w-full h-full"
-         />
-      </div>
-
-      <!-- Content -->
-      <div class="container relative z-10 mx-auto px-4 md:px-6">
-         <div class="max-w-3xl mx-auto text-center space-y-6">
-            <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl drop-shadow-md">
-               Sobre Futbol360
-            </h1>
-            <p class="max-w-[700px] mx-auto text-lg text-yellow-50 md:text-xl drop-shadow-md">
-               Conoce nuestra historia, misi&oacute;n, visi&oacute;n y los valores que nos definen
-            </p>
+<Layout>
+   <main class="flex min-h-screen flex-col">
+      <!-- Hero Banner -->
+      <section class="relative py-24 text-white">
+         <!-- Background Image -->
+         <div class="absolute inset-0 z-0">
+            <img
+               src="/images/nosotros-banner.jpg"
+               alt="Sobre Nosotros"
+               class="object-cover object-center brightness-40 w-full h-full"
+            />
          </div>
-      </div>
-   </section>
-
-   <!-- Historia -->
-   <section class="py-20">
-      <div class="container mx-auto px-4 md:px-6">
-         <div class="grid gap-12 md:grid-cols-2 items-center">
-            <div class="space-y-4">
-               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">Nuestra Historia</h2>
-               <p class="text-gray-500 md:text-lg">
-                  Futbol360 naci&oacute; en 2024 con una visi&oacute;n clara: transformar la manera en que los adultos se relacionan con
-                  el f&uacute;tbol. Lo que comenz&oacute; como un peque&ntilde;o grupo de entusiastas se ha convertido en una comunidad
-                  vibrante.
-               </p>
-               <p class="text-gray-500 md:text-lg">
-                  A lo largo de este tiempo, hemos evolucionado de ser simplemente un lugar para entrenar f&uacute;tbol a
-                  convertirnos en un centro integral de bienestar f&iacute;sico y mental a trav&eacute;s del deporte. Nuestro enfoque
-                  hol&iacute;stico ha permitido que personas de todas las edades y niveles de condici&oacute;n f&iacute;sica encuentren en el
-                  f&uacute;tbol una herramienta para mejorar su calidad de vida.
-               </p>
-               <p class="text-gray-500 md:text-lg">
-                  Hoy, Futbol360 es reconocida como una instituci&oacute;n l&iacute;der en el entrenamiento deportivo para adultos, con
-                  un equipo de profesionales altamente calificados y una metodolog&iacute;a &uacute;nica que combina lo mejor de la
-                  ciencia deportiva con la pasi&oacute;n por el f&uacute;tbol.
+      
+         <!-- Content -->
+         <div class="container relative z-10 mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+               <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl drop-shadow-md">
+                  Sobre Futbol360
+               </h1>
+               <p class="max-w-[700px] mx-auto text-lg text-yellow-50 md:text-xl drop-shadow-md">
+                  Conoce nuestra historia, misi&oacute;n, visi&oacute;n y los valores que nos definen
                </p>
             </div>
-            <div class="relative h-[500px] rounded-lg overflow-hidden">
-               <img
-                  src="/images/equipo-tecnico.jpg"
-                  alt="Historia de Futbol360"
-                  class="object-cover w-full h-full"
-               />
-            </div>
          </div>
-      </div>
-   </section>
-
-   <!-- Misi&oacute;n y Visi&oacute;n -->
-   <section class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4 md:px-6">
-         <div class="grid gap-12 md:grid-cols-2">
-            <!-- Misi&oacute;n -->
-            <div class="bg-white p-8 rounded-lg shadow-sm">
-               <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mb-6 mx-auto">
-                  <FiTarget className="text-2xl" />
+      </section>
+   
+      <!-- Historia -->
+      <section class="py-20">
+         <div class="container mx-auto px-4 md:px-6">
+            <div class="grid gap-12 md:grid-cols-2 items-center">
+               <div class="space-y-4">
+                  <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">Nuestra Historia</h2>
+                  <p class="text-gray-500 md:text-lg">
+                     Futbol360 naci&oacute; en 2024 con una visi&oacute;n clara: transformar la manera en que los adultos se relacionan con
+                     el f&uacute;tbol. Lo que comenz&oacute; como un peque&ntilde;o grupo de entusiastas se ha convertido en una comunidad
+                     vibrante.
+                  </p>
+                  <p class="text-gray-500 md:text-lg">
+                     A lo largo de este tiempo, hemos evolucionado de ser simplemente un lugar para entrenar f&uacute;tbol a
+                     convertirnos en un centro integral de bienestar f&iacute;sico y mental a trav&eacute;s del deporte. Nuestro enfoque
+                     hol&iacute;stico ha permitido que personas de todas las edades y niveles de condici&oacute;n f&iacute;sica encuentren en el
+                     f&uacute;tbol una herramienta para mejorar su calidad de vida.
+                  </p>
+                  <p class="text-gray-500 md:text-lg">
+                     Hoy, Futbol360 es reconocida como una instituci&oacute;n l&iacute;der en el entrenamiento deportivo para adultos, con
+                     un equipo de profesionales altamente calificados y una metodolog&iacute;a &uacute;nica que combina lo mejor de la
+                     ciencia deportiva con la pasi&oacute;n por el f&uacute;tbol.
+                  </p>
                </div>
-               <h3 class="text-2xl font-bold text-center mb-4">Nuestra Misi&oacute;n</h3>
-               <p class="text-gray-500 text-center">
-                  Potenciar el rendimiento de los apasionados por el deporte
-               </p>
-            </div>
-
-            <!-- Visi&oacute;n -->
-            <div class="bg-white p-8 rounded-lg shadow-sm">
-               <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mb-6 mx-auto">
-                  <BsLightbulb className="text-2xl" />
+               <div class="relative h-[500px] rounded-lg overflow-hidden">
+                  <img
+                     src="/images/equipo-tecnico.jpg"
+                     alt="Historia de Futbol360"
+                     class="object-cover w-full h-full"
+                  />
                </div>
-               <h3 class="text-2xl font-bold text-center mb-4">Nuestra Visi&oacute;n</h3>
-               <p class="text-gray-500 text-center">
-                  Convertirnos en un motor de cambio, utilizando el deporte como medio
-               </p>
             </div>
          </div>
-      </div>
-   </section>
-
-   <!-- Valores -->
-   <section class="py-20">
-      <div class="container mx-auto px-4 md:px-6">
-         <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">Nuestros Valores</h2>
-            <p class="max-w-[700px] text-gray-500 md:text-lg">
-               Los principios que gu&iacute;an nuestras acciones y definen nuestra cultura
-            </p>
+      </section>
+   
+      <!-- Misi&oacute;n y Visi&oacute;n -->
+      <section class="py-20 bg-gray-50">
+         <div class="container mx-auto px-4 md:px-6">
+            <div class="grid gap-12 md:grid-cols-2">
+               <!-- Misi&oacute;n -->
+               <div class="bg-white p-8 rounded-lg shadow-sm">
+                  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mb-6 mx-auto">
+                     <FiTarget className="text-2xl" />
+                  </div>
+                  <h3 class="text-2xl font-bold text-center mb-4">Nuestra Misi&oacute;n</h3>
+                  <p class="text-gray-500 text-center">
+                     Potenciar el rendimiento de los apasionados por el deporte
+                  </p>
+               </div>
+            
+               <!-- Visi&oacute;n -->
+               <div class="bg-white p-8 rounded-lg shadow-sm">
+                  <div class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-600 mb-6 mx-auto">
+                     <BsLightbulb className="text-2xl" />
+                  </div>
+                  <h3 class="text-2xl font-bold text-center mb-4">Nuestra Visi&oacute;n</h3>
+                  <p class="text-gray-500 text-center">
+                     Convertirnos en un motor de cambio, utilizando el deporte como medio
+                  </p>
+               </div>
+            </div>
          </div>
-         
-         <Valores />
-      </div>
-   </section>
-</main>
+      </section>
+   
+      <!-- Valores -->
+      <section class="py-20">
+         <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">Nuestros Valores</h2>
+               <p class="max-w-[700px] text-gray-500 md:text-lg">
+                  Los principios que gu&iacute;an nuestras acciones y definen nuestra cultura
+               </p>
+            </div>
+            
+            <Valores />
+         </div>
+      </section>
+   </main>
+</Layout>

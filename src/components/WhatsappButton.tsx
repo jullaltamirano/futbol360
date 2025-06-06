@@ -4,6 +4,7 @@ import { LuMessageCircleMore } from "react-icons/lu"
 
 export const WhatsappButton = () => {
   const openWhatsapp = () => {
+    console.log("first")
     window.open( "https://wa.link/nbogpa", "_blank" )
   }
 

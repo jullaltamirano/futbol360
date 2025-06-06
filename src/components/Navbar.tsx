@@ -14,7 +14,7 @@ export const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <a href="/" className="flex items-center space-x-2">
-          <div className="font-bold text-xl text-yellow-600">Futbol360</div>
+          <img src="/images/logo_horizontal.png" height={ 80 } width={ 150 } />
         </a>
         <nav className="hidden md:flex items-center space-x-6 ml-auto">
           <a href="/" className="text-sm font-medium hover:text-yellow-600 transition-colors">Inicio</a>
@@ -34,7 +34,7 @@ export const Navbar = () => {
           <div className="fixed inset-0 z-50 bg-white md:hidden">
             <div className="container flex h-16 items-center justify-between px-4">
               <a href="/" className="flex items-center space-x-2">
-                <div className="font-bold text-xl text-yellow-600">Futbol360</div>
+                <img src="/images/logo_horizontal.png" height={ 80 } width={ 150 } />
               </a>
               <button
                 className="p-2 rounded-md hover:bg-gray-100 transition-colors"

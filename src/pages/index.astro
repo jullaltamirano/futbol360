@@ -8,16 +8,10 @@ import SponsorsSection from "../components/IndexComponents/SponsorsSection.astro
 import LocationSection from "../components/IndexComponents/LocationSection.astro"
 import ContactSection from "../components/IndexComponents/ContactSection.astro"
 
-import { Navbar } from "../components/Navbar"
-import { WhatsappButton } from "../components/WhatsappButton"
-
 ---
 
 <Layout>
 	<main class="flex min-h-screen flex-col">
-		<Navbar client:visible />
-		<WhatsappButton client:visible />
-
 		{/* Hero Banner with Background Image */}
 		<HeroBannerSection />
 
@@ -31,7 +25,7 @@ import { WhatsappButton } from "../components/WhatsappButton"
 		<CoachesSection />
 
 		{/* Sponsors */}
-		<SponsorsSection />
+		<!-- <SponsorsSection /> -->
 
 		{/* Locations */}
 		<LocationSection />
