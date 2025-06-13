@@ -34,7 +34,58 @@ export const ContactForm = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault()
 
-      const htmlContent = `<html><head></head><body><h2>Nombre: ${form.name}</h2><h2>Email: ${form.email}</h2><h2>Telefono: ${form.phone}</h2><h2>Mensaje: ${form.message}</h2></body></html>`;
+      const htmlContent = `
+        <html>
+          <head>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                padding: 20px;
+                margin: 0;
+              }
+              .container {
+                max-width: 600px;
+                background-color: #ffffff;
+                padding: 30px;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+              }
+              h2 {
+                color: #333333;
+                margin-top: 0;
+              }
+              .info {
+                margin-bottom: 20px;
+              }
+              .label {
+                font-weight: bold;
+                color: #555555;
+              }
+              .value {
+                color: #000000;
+              }
+              .footer {
+                text-align: center;
+                font-size: 12px;
+                color: #999999;
+                margin-top: 30px;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h2>Nuevo mensaje desde el formulario de contacto</h2>
+              <div class="info"><span class="label">Nombre:</span> <span class="value">${form.name}</span></div>
+              <div class="info"><span class="label">Email:</span> <span class="value">${form.email}</span></div>
+              <div class="info"><span class="label">Teléfono:</span> <span class="value">${form.phone}</span></div>
+              <div class="info"><span class="label">Mensaje:</span><br/><div class="value">${form.message.replace(/\n/g, '<br/>')}</div></div>
+              <div class="footer">Este correo fue enviado automáticamente desde Futbol360.</div>
+            </div>
+          </body>
+        </html>
+        `;
       const body = {
          sender: {
             name: 'Futbol360 - Contact Form',
