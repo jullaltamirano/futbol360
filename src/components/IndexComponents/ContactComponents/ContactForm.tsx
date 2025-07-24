@@ -89,11 +89,11 @@ export const ContactForm = () => {
       const body = {
          sender: {
             name: 'Futbol360 - Contact Form',
-            email: 'jullaltamiranop@gmail.com',
+            email: 'ventas@futbol360.com.pe',
          },
          to: [
             {
-               email: 'jullaltamiranop@gmail.com',
+               email: 'ventas@futbol360.com.pe',
                name: 'Futbol360',
             },
          ],
