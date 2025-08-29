@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa"
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,6 +21,9 @@ export const Navbar = () => {
           <a href="/" className="text-sm font-medium hover:text-yellow-600 transition-colors">Inicio</a>
           <a href="/nosotros" className="text-sm font-medium hover:text-yellow-600 transition-colors">Nosotros</a>
           <a href="/contacto" className="text-sm font-medium hover:text-yellow-600 transition-colors">Contacto</a>
+          <a href="https://www.tiktok.com/@futbol36077" target="_blank" className="text-sm font-medium hover:text-yellow-600 transition-colors" title="Tiktok"><FaTiktok /></a>
+          <a href="https://www.instagram.com/futbol360peru?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="text-sm font-medium hover:text-yellow-600 transition-colors" title="Instagram"><FaInstagram /></a>
+          <a href="https://www.linkedin.com/company/futbol360-/" target="_blank" className="text-sm font-medium hover:text-yellow-600 transition-colors" title="LinkedIn"><FaLinkedin /></a>
         </nav>
         <button
           className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
@@ -62,6 +66,11 @@ export const Navbar = () => {
               >
                 Contacto
               </a>
+              <div className="flex space-x-2">
+                <a href="https://www.tiktok.com/@futbol36077" target="_blank" className="text-lg font-medium hover:text-yellow-600 transition-colors" title="Tiktok"><FaTiktok /></a>
+                <a href="https://www.instagram.com/futbol360peru?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="text-lg font-medium hover:text-yellow-600 transition-colors" title="Instagram"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/company/futbol360-/" target="_blank" className="text-lg font-medium hover:text-yellow-600 transition-colors" title="LinkedIn"><FaLinkedin /></a>
+              </div>
             </nav>
           </div>
         )
